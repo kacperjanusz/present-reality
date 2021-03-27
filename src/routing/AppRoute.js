@@ -1,7 +1,7 @@
 export const AppRoute = {
-  Home: '/',
+  Start: '/',
   Login: '/login',
   Information: '/information',
   Game: '/game',
   Summary: '/summary',
-}
+};
