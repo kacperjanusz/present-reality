@@ -23,6 +23,7 @@ export const UrgeWithPleasureComponent = () => {
         <CountdownCircleTimer
           isPlaying
           duration={10}
+          // @ts-ignore
           colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
           onComplete={() => [true, 1000]}
         >
