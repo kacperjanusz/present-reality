@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 import { Game } from '../Pages/Game';
@@ -11,11 +12,11 @@ export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path={AppRoute.Start} exact component={StartPage} />
         <Route path={AppRoute.Login} component={Login} />
-        <Route path={AppRoute.InformationPage} component={InformationPage} />
+        <Route path={AppRoute.Information} component={InformationPage} />
         <Route path={AppRoute.Game} component={Game} />
         <Route path={AppRoute.Summary} component={Summary} />
+        <Route path={AppRoute.Start} component={StartPage} />
       </Switch>
     </BrowserRouter>
   );
