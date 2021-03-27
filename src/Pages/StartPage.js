@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button } from 'antd';
+import { UrgeWithPleasureComponent } from '../Components/Timer/Timer';
 
 export const StartPage = () => {
   return (
     <div>
-      <Button type="primary">TEST</Button>
+      <UrgeWithPleasureComponent />
     </div>
   );
 };
