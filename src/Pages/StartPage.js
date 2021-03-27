@@ -4,7 +4,7 @@ import { Button } from 'antd';
 export const StartPage = () => {
   return (
     <div>
-      <Button>TEST</Button>
+      <Button type="primary">TEST</Button>
     </div>
   );
 };
