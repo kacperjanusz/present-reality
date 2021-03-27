@@ -19,7 +19,7 @@ export const StartPage = () => {
     <Box>
       <CardContent>
         <BoxImage>
-          <Image width={400} src={logo} />
+          <img width={400} src={logo} />
         </BoxImage>
         <div>
           <Title level={2}>Trenuj swoją świadomość</Title>
