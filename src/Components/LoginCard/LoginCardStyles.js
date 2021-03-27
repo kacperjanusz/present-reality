@@ -25,7 +25,7 @@ export const Title = styled.h1`
 `;
 
 export const CustomInput = styled(Input)`
-  margin-bottom: '20px';
+  padding: '50% !important';
 `;
 
 export const CustomButton = styled(Button)`

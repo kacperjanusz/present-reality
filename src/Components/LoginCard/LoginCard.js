@@ -14,7 +14,7 @@ export const LoginCard = () => {
   return (
     <CardWrapper>
       <Title>{loginTitle}</Title>
-      <CustomInput value={value} type="text" onChange={onChange} placeholder="Name" />
+      <CustomInput style={{width: '50%'}} value={value} type="text" onChange={onChange} placeholder="Name" />
       <CustomButton type="primary">{next}</CustomButton>
     </CardWrapper>
   );
