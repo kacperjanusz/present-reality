@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Button } from 'antd';
+import { Card } from 'antd';
 
 export const Title = styled.h6`
   margin-top: 45px;
@@ -26,23 +27,28 @@ export const Description = styled.h1`
 export const DescriptionBox = styled.div`
   width: 400px;
   display: flex;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  justify-content: center;
+  margin-left: 50px;
 `;
 
 export const Box = styled.div`
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  justify-items: center;
   align-items: center;
-  background-color: #10305f;
-  padding: 5;
 `;
 
 export const Details = styled.span`
   color: #d87f3f;
+`;
+
+export const CardContent = styled(Card)`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: inset 0 0 1em rgb(220, 220, 220), 0 0 1em rgb(105, 105, 105);
+  background-color: rgb(211, 211, 211);
+  opacity: rgba(255, 255, 255, 0.5);
 `;
 
 export const Author = styled.div`
