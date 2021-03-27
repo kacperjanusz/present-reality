@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 import { Game } from '../Pages/Game';
-import { InformationPage } from '../Pages/InformationPage';
+import { InformationPage } from '../Pages/InformationPage/InformationPage';
 import { Login } from '../Pages/Login';
 import { StartPage } from '../Pages/StartPage/StartPage';
 import { Summary } from '../Pages/Summary';

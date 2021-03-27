@@ -12,7 +12,7 @@ export const CustomButton = styled(Button)`
   text-align: center;
   border-radius: 5px;
   font-weight: bold;
-  width: 250px;
+  width: 400px;
   height: 50px;
   margin-top: 8px;
 `;

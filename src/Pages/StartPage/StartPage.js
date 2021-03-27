@@ -19,10 +19,6 @@ export const StartPage = () => {
       <Author>
         <Description>~ Matthew D'Ancona</Description>
       </Author>
-
-      <CustomButton type="primary" onClick={() => history.push('/login')}>
-        DALEJ
-      </CustomButton>
     </Box>
   );
 };
