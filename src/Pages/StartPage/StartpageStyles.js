@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { Button } from 'antd';
-import { Card } from 'antd';
+import { Button, Card } from 'antd';
 
 export const Title = styled.h6`
   margin-top: 45px;
@@ -16,6 +15,7 @@ export const CustomButton = styled(Button)`
   width: 400px;
   height: 50px;
   margin-top: 8px;
+  margin-left: 250px;
 `;
 
 export const Description = styled.h1`
@@ -28,13 +28,19 @@ export const DescriptionBox = styled.div`
   width: 400px;
   display: flex;
   justify-content: center;
-  margin-left: 50px;
+  margin-left: 250px;
+`;
+
+export const BoxImage = styled.div`
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  margin-left: 250px;
 `;
 
 export const Box = styled.div`
   display: flex;
   justify-content: center;
-  justify-items: center;
   align-items: center;
 `;
 

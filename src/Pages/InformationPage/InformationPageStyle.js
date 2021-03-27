@@ -50,7 +50,7 @@ export const Description = styled.h1`
 `;
 
 export const BoxImage = styled.div`
-  margin-left: 100px;
+  margin-left: 150px;
 `;
 
 export const DescriptionBox = styled.div`

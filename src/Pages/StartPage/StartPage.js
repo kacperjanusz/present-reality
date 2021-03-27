@@ -1,6 +1,15 @@
 import React from 'react';
 import { Image } from 'antd';
-import { Title, Box, Description, DescriptionBox, Author, CustomButton, CardContent } from './StartpageStyles';
+import {
+  Title,
+  Box,
+  Description,
+  DescriptionBox,
+  Author,
+  CustomButton,
+  CardContent,
+  BoxImage,
+} from './StartpageStyles';
 import logo from '../../assets/StartpageImg.png';
 import { useHistory } from 'react-router-dom';
 
@@ -9,9 +18,9 @@ export const StartPage = () => {
   return (
     <Box>
       <CardContent>
-        <div>
+        <BoxImage>
           <Image width={400} src={logo} />
-        </div>
+        </BoxImage>
         <div>
           <Title level={2}>Trenuj swoją świadomość</Title>
         </div>
