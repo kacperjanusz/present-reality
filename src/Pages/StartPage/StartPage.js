@@ -1,9 +1,8 @@
 import React from 'react';
 import { Image } from 'antd';
-import { Title, Box, Description, DescriptionBox } from './StartpageStyles';
+import { Title, Box, Description, DescriptionBox, Author, CustomButton } from './StartpageStyles';
 import logo from '../../assets/StartpageImg.png';
 import { useHistory } from 'react-router-dom';
-import { BasicButton } from '../../Components/BasicButton/BasicButton';
 
 export const StartPage = () => {
   let history = useHistory();
@@ -17,8 +16,13 @@ export const StartPage = () => {
           online.
         </Description>
       </DescriptionBox>
-      <Description>~ Matthew D'Ancona</Description>
-      <BasicButton title="DALEJ" onClickFunction={() => history.push('/login')} />
+      <Author>
+        <Description>~ Matthew D'Ancona</Description>
+      </Author>
+
+      <CustomButton type="primary" onClick={() => history.push('/login')}>
+        DALEJ
+      </CustomButton>
     </Box>
   );
 };
