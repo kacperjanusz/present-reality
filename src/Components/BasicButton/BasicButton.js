@@ -16,6 +16,7 @@ export const BasicButton = ({ onClickFunction, title }) => {
         onClick={() => {
           onClickFunction();
         }}
+        block
       >
         {title}
       </CustomButton>

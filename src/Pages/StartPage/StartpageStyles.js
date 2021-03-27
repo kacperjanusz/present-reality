@@ -8,6 +8,15 @@ export const Title = styled.h6`
   color: #d87f3f;
 `;
 
+export const CustomButton = styled(Button)`
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 250px;
+  height: 50px;
+  margin-top: 8px;
+`;
+
 export const Description = styled.h1`
   font-size: 18px;
   text-align: center;
@@ -16,6 +25,9 @@ export const Description = styled.h1`
 
 export const DescriptionBox = styled.div`
   width: 400px;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 15px;
 `;
 
 export const Box = styled.div`
@@ -31,4 +43,12 @@ export const Box = styled.div`
 
 export const Details = styled.span`
   color: #d87f3f;
+`;
+
+export const Author = styled.div`
+  display: flex;
+  justify-content: end;
+  margin-left: 480px;
+  margin-bottom: 5px;
+  width: 400px;
 `;
