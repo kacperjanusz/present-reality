@@ -22,7 +22,7 @@ export const UrgeWithPleasureComponent = ({ onComplete }) => {
     <div className="timer-wrapper">
       <CountdownCircleTimer
         isPlaying
-        duration={3}
+        duration={10}
         onComplete={onComplete(false)}
         colors={[['#004777', 0.33], ['#F7B801', 0.33], ['#A30000']]}
       >
