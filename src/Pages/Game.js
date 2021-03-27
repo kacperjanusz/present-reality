@@ -1,5 +1,5 @@
 import React from 'react'
-import {UrgeWithPleasureComponent} from '../Components/Timer'
+import {UrgeWithPleasureComponent} from '../Components/Timer/Timer'
 
 export const Game = () => {
   return (
