@@ -1,7 +1,7 @@
-import React from "react";
-import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import React from 'react';
+import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
-import "./timer.css";
+import './timer.css';
 
 const renderTime = ({ remainingTime }) => {
   if (remainingTime === 0) {
@@ -17,17 +17,17 @@ const renderTime = ({ remainingTime }) => {
   );
 };
 
-export const UrgeWithPleasureComponent = () => {
+export const UrgeWithPleasureComponent = ({ onComplete }) => {
   return (
-      <div className="timer-wrapper">
-        <CountdownCircleTimer
-          isPlaying
-          duration={10}
-          colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
-          onComplete={() => [true, 1000]}
-        >
-          {renderTime}
-        </CountdownCircleTimer>
-      </div>
+    <div className="timer-wrapper">
+      <CountdownCircleTimer
+        isPlaying
+        duration={3}
+        onComplete={onComplete(false)}
+        colors={[['#004777', 0.33], ['#F7B801', 0.33], ['#A30000']]}
+      >
+        {renderTime}
+      </CountdownCircleTimer>
+    </div>
   );
-}
+};

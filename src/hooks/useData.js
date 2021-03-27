@@ -12,11 +12,12 @@ const useGameData = () => {
         const realNews = getRealNews();
         const fakeNews = getFakeNews();
         const [real, fake] = await Promise.all([realNews, fakeNews]);
+        setData({ real, fake });
         setIsError(false);
         setIsLoading(false);
-        setData({ real, fake });
       } catch (ex) {
         setData(mockData);
+        setIsLoading(false);
         setIsError(true);
       }
     })();
