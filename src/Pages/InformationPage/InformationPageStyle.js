@@ -10,11 +10,6 @@ export const CustomTitle = styled.h6`
 `;
 
 export const CardContent = styled(Card)`
-  display: flex;
-  width: 50%;
-  margin-top: 120px;
-  justify-content: center;
-  align-content: center;
   box-shadow: inset 0 0 1em rgb(220, 220, 220), 0 0 1em rgb(105, 105, 105);
   background-color: rgb(211, 211, 211);
   opacity: rgba(255, 255, 255, 0.5);
@@ -24,6 +19,9 @@ export const CardContentv2 = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+  /* height: 80vh; */
+  /* width: 100vw; */
+  margin-top: 55px;
 `;
 
 export const CustomDescription = styled.h6`
