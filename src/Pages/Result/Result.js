@@ -5,6 +5,9 @@ import styled from 'styled-components';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import { Typography } from 'antd';
+import { useHistory } from 'react-router-dom';
+import { AppRoute } from '../../routing/AppRoute';
+import { BasicButton } from '../../Components/BasicButton/BasicButton';
 
 const { Title } = Typography;
 
@@ -12,7 +15,7 @@ const { Meta } = Card;
 
 const CardWrapperFake = styled(Card)`
   width: 40vw;
-  border-color: green;
+  border-color: red;
   border-radius: 5px;
   border-bottom-width: thin;
   border-bottom-style: solid;
@@ -21,7 +24,7 @@ const CardWrapperFake = styled(Card)`
 const CardWrapperReal = styled(Card)`
   margin-top: 250px;
   width: 40vw;
-  border-color: red;
+  border-color: green;
   border-radius: 5px;
   margin: 0 50px;
 `;
@@ -44,6 +47,11 @@ const Boxv2 = styled.div`
   display: flex;
 `;
 
+const Boxv3 = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const Buttonv2 = styled(Button)`
   width: 100px !important;
   height: 100px !important;
@@ -62,8 +70,13 @@ export const Result = (props) => {
     setImageArrayLength(questions.length);
   }, []);
 
+  const history = useHistory();
+
   const onClick = () => {
     setCurrentIndex(currentIndex + 1);
+    if (currentIndex === 4) {
+      history.push(AppRoute.Summary, { questions });
+    }
   };
 
   const isDisabled = currentIndex === 5 ? true : false;
@@ -82,7 +95,6 @@ export const Result = (props) => {
             <Title level={2}>Real News</Title>
           </CardWrapperReal>
         </ImageBox>
-
         <Buttonv2
           type="primary"
           icon={<RightOutlined />}
