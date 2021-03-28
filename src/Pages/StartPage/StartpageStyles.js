@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Button, Card } from 'antd';
-import background from '../../assets/background.png';
+import img from '../../assets/background.png';
 
 export const Title = styled.h6`
   margin-top: 45px;
@@ -40,7 +40,9 @@ export const BoxImage = styled.div`
 `;
 
 export const Box = styled.div`
+  background-image: url(${img});
   display: flex;
+  color: red;
   justify-content: center;
   align-items: center;
   height: 100vh;

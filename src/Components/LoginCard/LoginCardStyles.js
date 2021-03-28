@@ -25,9 +25,13 @@ export const Title = styled.h1`
 `;
 
 export const CustomInput = styled(Input)`
-  padding: '50% !important';
+  padding: 10px !important;
+  width: 400px !important;
 `;
 
 export const CustomButton = styled(Button)`
   width: '50%';
+  margin-top: 15px;
+  width: 400px;
+  height: 40px;
 `;
