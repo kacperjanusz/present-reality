@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { bravo, playAgain, seeYourAnswers, tasks, youAnswearedCorractly } from '../../constants';
-import { AppRoute } from '../../routing/AppRoute';
 import awesome from '../../assets/awesome.png';
 import bad from '../../assets/bad.png';
 import good from '../../assets/awesome.png';
@@ -34,9 +33,6 @@ export const Summary = (props) => {
 
   const correctAnwsers = 5 - questions.reduce((agg, curr) => (agg += curr.isCorrect ? 1 : 0), 0);
 
-  console.log('fake', questions);
-  console.log('correctAnwsers', correctAnwsers);
-
   let history = useHistory();
   return (
     <CardContentv2>
@@ -45,7 +41,7 @@ export const Summary = (props) => {
           <CustomCol span="10">
             <CustomTitle>{bravo}</CustomTitle>
             <DescriptionBox>
-              <CustomDescription>{youAnswearedCorractly + correctAnwsers + tasks}</CustomDescription>
+              <CustomDescription>{youAnswearedCorractly + correctAnwsers + "/5" + tasks}</CustomDescription>
             </DescriptionBox>
             <CustomButton type="primary" onClick={() => history.push('/result', { questions })}>
               {seeYourAnswers}

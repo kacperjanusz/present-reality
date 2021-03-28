@@ -37,7 +37,7 @@ export const CardContentv2 = styled.div`
 
 export const CustomDescription = styled.h6`
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   color: #7a273a;
   margin-top: 2rem;

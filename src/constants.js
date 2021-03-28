@@ -11,6 +11,6 @@ export const seeYourAnswers = 'ZOBACZ POPRAWNE ODPOWIEDZI';
 export const playAgain = 'ZAGRAJ PONOWNIE';
 export const youAnswearedCorractly = 'Odpowiedziałeś poprawnie na ';
 export const bravo = 'BRAWO';
-export const tasks = ' zadania';
+export const tasks = ' pytań';
 export const mainDescriptionQuiz =
   'Na każde zadanie masz 10 sekund. Po zakończeniu quizu okaże się czy jesteś wirtualnym cyborgiem czy jeszcze realnym człowiekem. Jeżeli już zostałeś królem świata wirtualnego nie martw siępomożemy Ci wrócić do realnego świata';
