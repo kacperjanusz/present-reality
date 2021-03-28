@@ -5,4 +5,5 @@ export const AppRoute = {
   Game: '/game',
   Summary: '/summary',
   Answers: '/answers',
+  Result: '/result',
 };
