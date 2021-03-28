@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { bravo, playAgain, seeYourAnswers, tasks, youAnswearedCorractly } from '../../constants';
+import { bravo, playAgain, seeYourAnswers, tasks, score, youAnswearedCorractly } from '../../constants';
 import awesome from '../../assets/awesome.png';
 import bad from '../../assets/bad.png';
 import good from '../../assets/awesome.png';
@@ -48,6 +48,9 @@ export const Score = (props) => {
             </CustomButton>
             <CustomButton type="primary" onClick={() => history.push('/information')}>
               {playAgain}
+            </CustomButton>
+            <CustomButton type="primary" onClick={() => history.push('/score')}>
+              {score}
             </CustomButton>
           </CustomCol>
           <Col span="12">
