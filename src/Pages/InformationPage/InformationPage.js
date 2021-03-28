@@ -8,7 +8,7 @@ import {
   CardContent,
   DescriptionBox,
   BoxImage,
-  CardContentv2,
+  Box,
   CustomButton,
 } from './InformationPageStyle';
 
@@ -16,24 +16,26 @@ export const InformationPage = () => {
   let history = useHistory();
 
   return (
-    <CardContentv2>
+    <Box>
       <CardContent>
         <BoxImage>
-          <Image width={400} src={mind} />
+          <img width={400} src={mind} />
         </BoxImage>
 
         <CustomTitle>Pora poznać swój umysł</CustomTitle>
-        <DescriptionBox>
-          <CustomDescription>
-            PRZED TOBA QUIZ SKŁADAJĄCY SIĘ Z 10 ZADAŃ. NA KAZDE ZADANIE MASZ 10 SEKUND. PO ZAKONCZENIU QUIZU OKAŻE SIĘ
-            CZY JESTEŚ WIRTUALNYM CYBORGIEM CZY JESZCZE REALNYM CZŁOWIEKIEM. JEZELI JUZ ZOSTALES KROLEM SWIATA
-            WIRTUALNEGO NIE MARTW SIE POMOŻEMY CI WROCIC DO REALNEGO ŚWIATA.
-          </CustomDescription>
-        </DescriptionBox>
+        <div>
+          <DescriptionBox>
+            <CustomDescription>
+              PRZED TOBA QUIZ SKŁADAJĄCY SIĘ Z 10 ZADAŃ. NA KAZDE ZADANIE MASZ 10 SEKUND. PO ZAKONCZENIU QUIZU OKAŻE SIĘ
+              CZY JESTEŚ WIRTUALNYM CYBORGIEM CZY JESZCZE REALNYM CZŁOWIEKIEM. JEZELI JUZ ZOSTALES KROLEM SWIATA
+              WIRTUALNEGO NIE MARTW SIE POMOŻEMY CI WROCIC DO REALNEGO ŚWIATA.
+            </CustomDescription>
+          </DescriptionBox>
+        </div>
         <CustomButton type="primary" onClick={() => history.push('/game')}>
           SPRAWDŹ SIĘ
         </CustomButton>
       </CardContent>
-    </CardContentv2>
+    </Box>
   );
 };
