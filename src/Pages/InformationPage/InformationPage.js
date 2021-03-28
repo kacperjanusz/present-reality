@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image } from 'antd';
 import mind from '../../assets/mind.png';
 import { useHistory } from 'react-router-dom';
 import {
@@ -19,7 +18,7 @@ export const InformationPage = () => {
     <Box>
       <CardContent>
         <BoxImage>
-          <img width={400} src={mind} />
+          <img width={400} src={mind} alt=""/>
         </BoxImage>
 
         <CustomTitle>Pora poznać swój umysł</CustomTitle>

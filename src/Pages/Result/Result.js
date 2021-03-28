@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { Card } from 'antd';
-import GameContent from '../../Components/GameContent/GameContent';
 import styled from 'styled-components';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import { Typography } from 'antd';
 import { useHistory } from 'react-router-dom';
 import { AppRoute } from '../../routing/AppRoute';
-import { BasicButton } from '../../Components/BasicButton/BasicButton';
 
 const { Title } = Typography;
-
-const { Meta } = Card;
 
 const CardWrapperFake = styled(Card)`
   width: 40vw;
@@ -51,17 +47,12 @@ const Buttonv2 = styled(Button)`
 `;
 
 export const Result = (props) => {
-  const [imagearrayLength, setImageArrayLength] = useState();
   const [currentIndex, setCurrentIndex] = useState(0);
   const {
     location: {
       state: { questions },
     },
   } = props;
-
-  useEffect(() => {
-    setImageArrayLength(questions.length);
-  }, []);
 
   const history = useHistory();
 
@@ -77,7 +68,6 @@ export const Result = (props) => {
   console.log(currentIndex);
   return (
     <div>
-      {/* <Title level={2}>Zobacz poprawne odpowiedzi</Title> */}
       <Box>
         <Buttonv2 type="primary" icon={<LeftOutlined />} size={'large'} onClick={() => onClick()} />
         <ImageBox>
