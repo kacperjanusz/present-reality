@@ -45,7 +45,6 @@ export const Box = styled.div`
   align-items: center;
   height: 100vh;
   width: 100vw;
-  /* background: url(${background}); */
 `;
 
 export const Details = styled.span`
