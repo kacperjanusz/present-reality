@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import img from '../../assets/background.png';
 
 export const Box = styled.div`
   width: 100vw;
@@ -7,6 +8,6 @@ export const Box = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #10305f;
   padding: 5;
+  background-image: url(${img});
 `;

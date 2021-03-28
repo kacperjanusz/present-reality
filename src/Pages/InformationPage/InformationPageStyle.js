@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Button } from 'antd';
 import { Card } from 'antd';
+import img from '../../assets/background.png';
 
 export const CustomTitle = styled.h6`
   margin-top: 10px;
@@ -24,6 +25,7 @@ export const Box = styled.div`
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-image: url(${img});
 `;
 
 export const CustomDescription = styled.h6`
