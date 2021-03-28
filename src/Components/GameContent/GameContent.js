@@ -27,6 +27,8 @@ const GameContent = ({ data }) => {
   const history = useHistory();
   const [currentQuestionIndex, setcurrentQuestionIndex] = useState(0);
 
+  console.log('DATA', data);
+
   const goNext = (isReal) => () => {
     if (currentQuestionIndex >= questions.length - 1) {
       history.push(AppRoute.Summary, { questions });
@@ -39,7 +41,7 @@ const GameContent = ({ data }) => {
 
   return (
     <Root>
-      <UrgeWithPleasureComponent key={currentQuestionIndex} onComplete={() => {}} />
+      <UrgeWithPleasureComponent key={currentQuestionIndex} onComplete={goNext} />
       <Carousel dotPosition="top" ref={sliderRef}>
         {questions.map(({ left, right }, i) => (
           <div key={i}>

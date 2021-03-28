@@ -13,15 +13,22 @@ code {
 
 .slick-dots li button {
   pointer-events: none !important;
-  transform: scale(3) !important;
-  background-color: rgb(211, 211, 211) !important;
+  transform: scale(2) !important;
+  background-color: rgba(216, 127, 63, 0.5) !important;
 }
 
 .slick-dots li.slick-active button {
   background-color: #d87f3f !important;
 }
+.slick-dots li {
+  margin: 0 2rem !important;
+}
 
 .slick-dots {
   display: flex;
-  justify-content: space-between !important;
+  justify-content: center !important;
+}
+
+.timer-wrapper {
+  transform: scale(0.7) !important;
 }

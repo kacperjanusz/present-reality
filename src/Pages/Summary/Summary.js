@@ -34,6 +34,9 @@ export const Summary = (props) => {
 
   const correctAnwsers = 5 - questions.reduce((agg, curr) => (agg += curr.isCorrect ? 1 : 0), 0);
 
+  console.log('fake', questions);
+  console.log('correctAnwsers', correctAnwsers);
+
   let history = useHistory();
   return (
     <CardContentv2>
@@ -44,7 +47,7 @@ export const Summary = (props) => {
             <DescriptionBox>
               <CustomDescription>{youAnswearedCorractly + correctAnwsers + tasks}</CustomDescription>
             </DescriptionBox>
-            <CustomButton type="primary" onClick={() => history.push(AppRoute.Result, { questions })}>
+            <CustomButton type="primary" onClick={() => history.push('/result', { questions })}>
               {seeYourAnswers}
             </CustomButton>
             <CustomButton type="primary" onClick={() => history.push('/information')}>
