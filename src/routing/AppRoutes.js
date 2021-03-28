@@ -22,7 +22,11 @@ export const AppRoutes = () => {
             <Route path={AppRoute.Game} component={Game} />
             <Route path={AppRoute.Summary} component={Summary} />
             <Route path={AppRoute.Answers} component={AnswearsPage} />
+<<<<<<< HEAD
             <Route path={'/result'} component={Result} />
+=======
+            <Route path={AppRoute.Result} component={Result} />
+>>>>>>> f5aa110351539e61751d3889c2e955039c646955
             <Route path={AppRoute.Start} component={StartPage} />
           </Switch>
         </CSSTransition>

@@ -41,7 +41,7 @@ const GameContent = ({ data }) => {
 
   return (
     <Root>
-      <UrgeWithPleasureComponent key={currentQuestionIndex} onComplete={() => {}} />
+      <UrgeWithPleasureComponent key={currentQuestionIndex} onComplete={goNext} />
       <Carousel dotPosition="top" ref={sliderRef}>
         {questions.map(({ left, right }, i) => (
           <div key={i}>

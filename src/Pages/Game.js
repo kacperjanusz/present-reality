@@ -4,14 +4,16 @@ import styled from 'styled-components';
 import GameContent from '../Components/GameContent/GameContent';
 
 import { useGameData } from '../hooks/useGameData';
+import { CustomTitle } from './Summary/SummaryStyles';
 
 const Wrapper = styled.div`
   height: 100vh;
 `;
 
-const H1 = styled.h1`
+const H1 = styled(CustomTitle)`
   height: 5vh;
   margin: 0;
+  text-align: center;
 `;
 
 export const Game = () => {
@@ -20,15 +22,12 @@ export const Game = () => {
   if (isLoading)
     return (
       <Spin size="large">
-        <Wrapper>
-          <H1>Game</H1>
-        </Wrapper>
+        <Wrapper></Wrapper>
       </Spin>
     );
 
   return (
     <Wrapper>
-      <H1>Game</H1>
       <GameContent data={data} />
     </Wrapper>
   );
