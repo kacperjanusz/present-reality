@@ -31,7 +31,9 @@ export const Summary = (props) => {
     },
   } = props;
 
-  const correctAnwsers = 5 - questions.reduce((agg, curr) => (agg += curr.isCorrect ? 1 : 0), 0);
+  let correctAnwsers = questions.reduce((agg, curr) => (agg += curr.isCorrect ? 1 : 0), 0);
+
+  questions[0].isCorrect && correctAnwsers++;
 
   let history = useHistory();
   return (

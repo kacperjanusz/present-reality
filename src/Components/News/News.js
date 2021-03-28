@@ -13,7 +13,7 @@ const CardWrapper = styled(Card)`
 `;
 
 const News = ({ title, image_url, source, handleClick }) => {
-  const isReal = source === 'aszdziennik.pl';
+  const isReal = source !== 'aszdziennik.pl';
   return (
     <CardWrapper hoverable cover={<img alt="example" src={image_url} onClick={handleClick(isReal)} />}>
       <Meta title={title} />
