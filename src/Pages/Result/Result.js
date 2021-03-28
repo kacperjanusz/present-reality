@@ -27,6 +27,7 @@ const CardWrapperReal = styled(Card)`
   border-color: green;
   border-radius: 5px;
   margin: 0 50px;
+  border-width: 5px;
 `;
 
 const ImageBox = styled.div`
