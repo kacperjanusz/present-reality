@@ -23,7 +23,6 @@ export const Game = () => {
 
   return (
     <Wrapper>
-      <h1>Game</h1>
       {<GameContent data={data} />}
     </Wrapper>
   );
