@@ -3,10 +3,15 @@ import React from 'react';
 import styled from 'styled-components';
 import GameContent from '../Components/GameContent/GameContent';
 
-import { useGameData } from '../hooks/useData';
+import { useGameData } from '../hooks/useGameData';
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  height: 100vh;
+`;
+
+const H1 = styled.h1`
+  height: 5vh;
+  margin: 0;
 `;
 
 export const Game = () => {
@@ -16,15 +21,15 @@ export const Game = () => {
     return (
       <Spin size="large">
         <Wrapper>
-          <h1>Game</h1>
+          <H1>Game</H1>
         </Wrapper>
       </Spin>
     );
 
   return (
     <Wrapper>
-      <h1>Game</h1>
-      {<GameContent data={data} />}
+      <H1>Game</H1>
+      <GameContent data={data} />
     </Wrapper>
   );
 };

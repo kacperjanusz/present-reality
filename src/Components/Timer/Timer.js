@@ -10,9 +10,7 @@ const renderTime = ({ remainingTime }) => {
 
   return (
     <div className="timer">
-      <div className="text">Pozostało</div>
       <div className="value">{remainingTime}</div>
-      <div className="text">sekund</div>
     </div>
   );
 };

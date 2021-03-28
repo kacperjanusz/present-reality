@@ -8,18 +8,23 @@ import { StartPage } from '../Pages/StartPage/StartPage';
 import { Summary } from '../Pages/Summary/Summary';
 import { AnswearsPage } from '../Pages/AnswearsPage/AnswearsPage';
 import { AppRoute } from './AppRoute';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 export const AppRoutes = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path={AppRoute.Login} component={Login} />
-        <Route path={AppRoute.Information} component={InformationPage} />
-        <Route path={AppRoute.Game} component={Game} />
-        <Route path={AppRoute.Summary} component={Summary} />
-        <Route path={AppRoute.Start} component={StartPage} />
-        <Route path={AppRoute.Answears} component={AnswearsPage} />
-      </Switch>
+      <TransitionGroup>
+        <CSSTransition classNames="fade" timeout={600}>
+          <Switch>
+            <Route path={AppRoute.Login} component={Login} />
+            <Route path={AppRoute.Information} component={InformationPage} />
+            <Route path={AppRoute.Game} component={Game} />
+            <Route path={AppRoute.Summary} component={Summary} />
+            <Route path={AppRoute.Start} component={StartPage} />
+            <Route path={AppRoute.Answears} component={AnswearsPage} />
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
     </BrowserRouter>
   );
 };
