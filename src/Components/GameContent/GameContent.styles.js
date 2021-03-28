@@ -9,7 +9,6 @@ export const NewsWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #364d79;
   height: 80vh;
 `;
 
