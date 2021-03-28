@@ -13,5 +13,5 @@ export const NewsWrapper = styled.div`
 `;
 
 export const Timer = styled(UrgeWithPleasureComponent)`
-  height: 15vh;
+  height: 5vh;
 `;

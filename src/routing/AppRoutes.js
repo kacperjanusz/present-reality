@@ -21,7 +21,7 @@ export const AppRoutes = () => {
             <Route path={AppRoute.Game} component={Game} />
             <Route path={AppRoute.Summary} component={Summary} />
             <Route path={AppRoute.Start} component={StartPage} />
-            <Route path={AppRoute.Answears} component={AnswearsPage} />
+            <Route path={AppRoute.Answers} component={AnswearsPage} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
