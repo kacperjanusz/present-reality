@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const Result = () => {
-  return <div>RESULT</div>;
+  return <div>XXXDFDFVDFV</div>;
 };
