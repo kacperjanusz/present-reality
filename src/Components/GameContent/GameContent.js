@@ -1,10 +1,11 @@
 import _ from 'lodash';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import News from '../News/News';
 import { useHistory } from 'react-router-dom';
 import { AppRoute } from '../../routing/AppRoute';
 import { UrgeWithPleasureComponent } from '../Timer/Timer';
-import { NewsWrapper } from './GameContent.styles';
+import { NewsWrapper, Root } from './GameContent.styles';
+import { Carousel } from 'antd';
 
 const createQuestions = (data) => {
   const questions = [];
@@ -21,6 +22,7 @@ const createQuestions = (data) => {
 };
 
 const GameContent = ({ data }) => {
+  const sliderRef = useRef(null);
   const [questions] = useState(createQuestions(data));
   const history = useHistory();
   const [currentQuestionIndex, setcurrentQuestionIndex] = useState(0);
@@ -32,18 +34,23 @@ const GameContent = ({ data }) => {
     }
     if (isReal) questions[currentQuestionIndex].isCorrect = true;
     setcurrentQuestionIndex(currentQuestionIndex + 1);
+    sliderRef.current.next();
   };
 
-  const { left, right } = questions[currentQuestionIndex];
-
   return (
-    <div>
-      <UrgeWithPleasureComponent key={currentQuestionIndex} onComplete={goNext} />
-      <NewsWrapper>
-        <News {...left} handleClick={goNext}></News>
-        <News {...right} handleClick={goNext}></News>
-      </NewsWrapper>
-    </div>
+    <Root>
+      <UrgeWithPleasureComponent key={currentQuestionIndex} onComplete={() => {}} />
+      <Carousel dotPosition="top" ref={sliderRef}>
+        {questions.map(({ left, right }, i) => (
+          <div key={i}>
+            <NewsWrapper>
+              <News {...left} handleClick={goNext}></News>
+              <News {...right} handleClick={goNext}></News>
+            </NewsWrapper>
+          </div>
+        ))}
+      </Carousel>
+    </Root>
   );
 };
 
