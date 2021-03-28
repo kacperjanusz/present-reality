@@ -1,17 +1,22 @@
 import styled from 'styled-components';
 import { Button } from 'antd';
 import { Card } from 'antd';
-import img from '../../assets/background.png';
 
 export const CustomTitle = styled.h6`
   margin-top: 10px;
   font-size: 35px;
-  text-align: center;
+  text-align: left;
   color: #d87f3f;
+  padding-bottom: 1rem;
+  border-bottom: 5px solid;
+  margin-top: 2rem;
 `;
 
 export const CardContent = styled(Card)`
   display: flex;
+  width: 50%;
+  margin-top: 120px;
+  height: 50vh
   justify-content: center;
   align-content: center;
   box-shadow: inset 0 0 1em rgb(220, 220, 220), 0 0 1em rgb(105, 105, 105);
@@ -19,13 +24,11 @@ export const CardContent = styled(Card)`
   opacity: rgba(255, 255, 255, 0.5);
 `;
 
-export const Box = styled.div`
+export const CardContentv2 = styled.div`
+  height: 50vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-image: url(${img});
+  align-content: center;
 `;
 
 export const CustomDescription = styled.h6`
@@ -33,6 +36,7 @@ export const CustomDescription = styled.h6`
   font-size: 15px;
   text-align: center;
   color: #7a273a;
+  margin-top: 2rem;
 `;
 
 export const CustomButton = styled(Button)`
@@ -42,7 +46,6 @@ export const CustomButton = styled(Button)`
   width: 400px;
   height: 50px;
   margin-top: 8px;
-  margin-left: 98px;
 `;
 
 export const Description = styled.h1`
@@ -52,6 +55,7 @@ export const Description = styled.h1`
 `;
 
 export const BoxImage = styled.div`
+  padding-top: 25px;
   margin-left: 150px;
 `;
 
