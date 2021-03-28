@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import GameContent from '../Components/GameContent/GameContent';
 
 import { useGameData } from '../hooks/useGameData';
-
 const Wrapper = styled.div`
   height: 100vh;
 `;

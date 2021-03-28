@@ -41,7 +41,7 @@ export const Summary = (props) => {
           <CustomCol span="10">
             <CustomTitle>{bravo}</CustomTitle>
             <DescriptionBox>
-              <CustomDescription>{youAnswearedCorractly + correctAnwsers + "/5" + tasks}</CustomDescription>
+              <CustomDescription>{youAnswearedCorractly + correctAnwsers + '/5' + tasks}</CustomDescription>
             </DescriptionBox>
             <CustomButton type="primary" onClick={() => history.push('/result', { questions })}>
               {seeYourAnswers}
