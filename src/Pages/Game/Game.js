@@ -1,9 +1,9 @@
 import { Spin } from 'antd';
 import React from 'react';
 import styled from 'styled-components';
-import GameContent from '../Components/GameContent/GameContent';
+import GameContent from '../../Components/GameContent/GameContent';
 
-import { useGameData } from '../hooks/useGameData';
+import { useGameData } from '../../hooks/useGameData';
 const Wrapper = styled.div`
   height: 100vh;
 `;
