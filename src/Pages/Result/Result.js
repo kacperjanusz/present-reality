@@ -44,14 +44,6 @@ const Box = styled.div`
 
   overflow: hidden !important;
 `;
-const Boxv2 = styled.div`
-  display: flex;
-`;
-
-const Boxv3 = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 const Buttonv2 = styled(Button)`
   width: 100px !important;
