@@ -9,6 +9,7 @@ export const next = 'DALEJ';
 export const finish = 'KONIEC';
 export const seeYourAnswers = 'ZOBACZ POPRAWNE ODPOWIEDZI';
 export const playAgain = 'ZAGRAJ PONOWNIE';
+export const score = 'RANKING';
 export const youAnswearedCorractly = 'Odpowiedziałeś poprawnie na ';
 export const bravo = 'BRAWO';
 export const tasks = ' pytań';
