@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { Card } from 'antd';
 import styled from 'styled-components';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
@@ -13,8 +13,9 @@ const CardWrapperFake = styled(Card)`
   width: 40vw;
   border-color: red;
   border-radius: 5px;
-  border-bottom-width: thin;
-  border-bottom-style: solid;
+
+  border-width: 5px;
+
   margin: 0 50px;
 `;
 const CardWrapperReal = styled(Card)`
@@ -63,6 +64,40 @@ export const Result = (props) => {
     }
   };
 
+  const left =
+    questions[currentIndex].left.source === 'aszdziennik.pl' ? (
+      <CardWrapperFake cover={<img alt="example" src={questions[currentIndex].left.image_url} />}>
+        <Title style={{ textAlign: 'center' }} type="danger" level={2}>
+          Fake News
+        </Title>
+        <Title level={2}>{questions[currentIndex].left.title}</Title>
+      </CardWrapperFake>
+    ) : (
+      <CardWrapperReal cover={<img alt="example" src={questions[currentIndex].left.image_url} />}>
+        <Title style={{ textAlign: 'center' }} type="success" level={2}>
+          Real News
+        </Title>
+        <Title level={2}>{questions[currentIndex].left.title}</Title>
+      </CardWrapperReal>
+    );
+
+  const right =
+    questions[currentIndex].right.source === 'aszdziennik.pl' ? (
+      <CardWrapperFake cover={<img alt="example" src={questions[currentIndex].right.image_url} />}>
+        <Title style={{ textAlign: 'center' }} type="danger" level={2}>
+          Fake News
+        </Title>
+        <Title level={2}>{questions[currentIndex].right.title}</Title>
+      </CardWrapperFake>
+    ) : (
+      <CardWrapperReal cover={<img alt="example" src={questions[currentIndex].right.image_url} />}>
+        <Title style={{ textAlign: 'center' }} level={2}>
+          Real News
+        </Title>
+        <Title level={2}>{questions[currentIndex].right.title}</Title>
+      </CardWrapperReal>
+    );
+
   const isDisabled = currentIndex === 5 ? true : false;
 
   console.log(currentIndex);
@@ -71,12 +106,8 @@ export const Result = (props) => {
       <Box>
         <Buttonv2 type="primary" icon={<LeftOutlined />} size={'large'} onClick={() => onClick()} />
         <ImageBox>
-          <CardWrapperFake hoverable cover={<img alt="example" src={questions[currentIndex].left.image_url} />}>
-            <Title level={2}>Fake News</Title>
-          </CardWrapperFake>
-          <CardWrapperReal hoverable cover={<img alt="example" src={questions[currentIndex].right.image_url} />}>
-            <Title level={2}>Real News</Title>
-          </CardWrapperReal>
+          {left}
+          {right}
         </ImageBox>
         <Buttonv2
           type="primary"
