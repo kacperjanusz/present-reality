@@ -21,7 +21,7 @@ export const StartPage = () => {
           <img width={400} src={logo} />
         </BoxImage>
         <div>
-          <Title level={2}>Trenuj swoją świadomość</Title>
+          <Title>Trenuj swoją świadomość</Title>
         </div>
         <div>
           <div>
