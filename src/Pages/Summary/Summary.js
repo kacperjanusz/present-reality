@@ -19,7 +19,7 @@ import { Row, Col, Image } from 'antd';
 function getEmoticon(answears) {
   if (answears <= 3) {
     return bad;
-  } else if (answears == 4) {
+  } else if (answears === 4) {
     return good;
   } else return awesome;
 }

@@ -18,7 +18,7 @@ export const StartPage = () => {
     <Box>
       <CardContent>
         <BoxImage>
-          <img width={400} src={logo} />
+          <img width={400} src={logo} alt="" />
         </BoxImage>
         <div>
           <Title>Trenuj swoją świadomość</Title>

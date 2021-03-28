@@ -20,7 +20,7 @@ export const CardContent = styled(Card)`
   display: flex;
   width: 50%;
   margin-top: 120px;
-  height: 50vh
+  height: 50vh;
   justify-content: center;
   align-content: center;
   box-shadow: inset 0 0 1em rgb(220, 220, 220), 0 0 1em rgb(105, 105, 105);
