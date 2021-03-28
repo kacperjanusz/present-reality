@@ -6,4 +6,5 @@ export const AppRoute = {
   Summary: '/summary',
   Answers: '/answers',
   Result: '/result',
+  Score: '/score',
 };

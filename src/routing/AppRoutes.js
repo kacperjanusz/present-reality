@@ -4,6 +4,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { Game } from '../Pages/Game/Game';
 import { InformationPage } from '../Pages/InformationPage/InformationPage';
 import { Login } from '../Pages/Login/Login';
+import { Score } from '../Pages/Score/Score';
 import { StartPage } from '../Pages/StartPage/StartPage';
 import { Summary } from '../Pages/Summary/Summary';
 import { AnswearsPage } from '../Pages/AnswearsPage/AnswearsPage';
@@ -24,6 +25,7 @@ export const AppRoutes = () => {
             <Route path={AppRoute.Answers} component={AnswearsPage} />
             <Route path={AppRoute.Result} component={Result} />
             <Route path={AppRoute.Start} component={StartPage} />
+            <Route path={AppRoute.Score} component={Score} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>

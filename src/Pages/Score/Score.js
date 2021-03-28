@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { bravo, playAgain, seeYourAnswers, tasks, score, youAnswearedCorractly } from '../../constants';
+import { bravo, playAgain, seeYourAnswers, tasks, youAnswearedCorractly } from '../../constants';
 import awesome from '../../assets/awesome.png';
 import bad from '../../assets/bad.png';
 import good from '../../assets/awesome.png';
@@ -13,7 +13,7 @@ import {
   CustomDescription,
   CustomTitle,
   DescriptionBox,
-} from './SummaryStyles';
+} from './ScoreStyles';
 import { Row, Col, Image } from 'antd';
 
 function getEmoticon(answears) {
@@ -24,7 +24,7 @@ function getEmoticon(answears) {
   } else return awesome;
 }
 
-export const Summary = (props) => {
+export const Score = (props) => {
   const {
     location: {
       state: { questions },
@@ -48,9 +48,6 @@ export const Summary = (props) => {
             </CustomButton>
             <CustomButton type="primary" onClick={() => history.push('/information')}>
               {playAgain}
-            </CustomButton>
-            <CustomButton type="primary" onClick={() => history.push('/score')}>
-              {score}
             </CustomButton>
           </CustomCol>
           <Col span="12">
