@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from 'antd';
+import { Button, Col } from 'antd';
 import { Card } from 'antd';
 
 export const CustomTitle = styled.h6`
@@ -10,6 +10,10 @@ export const CustomTitle = styled.h6`
   padding-bottom: 1rem;
   border-bottom: 5px solid;
   margin-top: 2rem;
+`;
+
+export const CustomCol = styled(Col)`
+  padding-left: 4rem;
 `;
 
 export const CardContent = styled(Card)`
@@ -37,6 +41,7 @@ export const CustomDescription = styled.h6`
   text-align: center;
   color: #7a273a;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 `;
 
 export const CustomButton = styled(Button)`
@@ -55,8 +60,8 @@ export const Description = styled.h1`
 `;
 
 export const BoxImage = styled.div`
-  padding-top: 25px;
-  margin-left: 150px;
+  padding-top: 85px;
+  margin-left: 200px;
 `;
 
 export const DescriptionBox = styled.div`

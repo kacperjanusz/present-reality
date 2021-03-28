@@ -10,6 +10,7 @@ import {
   CardContent,
   CardContentv2,
   CustomButton,
+  CustomCol,
   CustomDescription,
   CustomTitle,
   DescriptionBox,
@@ -31,14 +32,14 @@ export const Summary = (props) => {
     },
   } = props;
 
-  const correctAnwsers = questions.reduce((agg, curr) => (agg += curr.isCorrect ? 1 : 0), 0);
+  const correctAnwsers = 5 - questions.reduce((agg, curr) => (agg += curr.isCorrect ? 1 : 0), 0);
 
   let history = useHistory();
   return (
     <CardContentv2>
       <CardContent>
         <Row justify="start">
-          <Col span="10">
+          <CustomCol span="10">
             <CustomTitle>{bravo}</CustomTitle>
             <DescriptionBox>
               <CustomDescription>{youAnswearedCorractly + correctAnwsers + tasks}</CustomDescription>
@@ -49,7 +50,7 @@ export const Summary = (props) => {
             <CustomButton type="primary" onClick={() => history.push('/information')}>
               {playAgain}
             </CustomButton>
-          </Col>
+          </CustomCol>
           <Col span="12">
             {
               <BoxImage>
