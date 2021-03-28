@@ -14,6 +14,8 @@ export const CardWrapper = styled.div`
   background-color: rgb(251, 247, 247, 0.44);
   * > input {
     width: 50%;
+    height: 120%;
+    padding-bottom: 20px;
   }
 `;
 
@@ -29,5 +31,6 @@ export const CustomInput = styled(Input)`
 `;
 
 export const CustomButton = styled(Button)`
+  margin-bottom: '20px';
   width: '50%';
 `;
