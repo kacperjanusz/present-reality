@@ -27,6 +27,8 @@ const GameContent = ({ data }) => {
   const history = useHistory();
   const [currentQuestionIndex, setcurrentQuestionIndex] = useState(0);
 
+  console.log('DATA', data);
+
   const goNext = (isReal) => () => {
     if (currentQuestionIndex >= questions.length - 1) {
       history.push(AppRoute.Summary, { questions });

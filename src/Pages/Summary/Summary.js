@@ -33,6 +33,9 @@ export const Summary = (props) => {
 
   const correctAnwsers = questions.reduce((agg, curr) => (agg += curr.isCorrect ? 1 : 0), 0);
 
+  console.log('fake', questions);
+  console.log('correctAnwsers', correctAnwsers);
+
   let history = useHistory();
   return (
     <CardContentv2>
