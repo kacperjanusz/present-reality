@@ -10,12 +10,6 @@ const Wrapper = styled.div`
   height: 100vh;
 `;
 
-const H1 = styled(CustomTitle)`
-  height: 5vh;
-  margin: 0;
-  text-align: center;
-`;
-
 export const Game = () => {
   const { data, isLoading } = useGameData();
 
