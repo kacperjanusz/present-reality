@@ -1,67 +1,38 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { bravo, playAgain, seeYourAnswers, tasks, score, youAnswearedCorractly } from '../../constants';
-import awesome from '../../assets/awesome.png';
-import bad from '../../assets/bad.png';
-import good from '../../assets/awesome.png';
-import {
-  BoxImage,
-  CardContent,
-  CardContentv2,
-  CustomButton,
-  CustomCol,
-  CustomDescription,
-  CustomTitle,
-  DescriptionBox,
-} from './ScoreStyles';
-import { Row, Col, Image } from 'antd';
+import 'antd/dist/antd.css';
+import { Table, Space } from 'antd';
+import {Box, CardContent} from './ScoreStyles'
 
-function getEmoticon(answears) {
-  if (answears <= 3) {
-    return bad;
-  } else if (answears === 4) {
-    return good;
-  } else return awesome;
-}
+const { Column } = Table;
 
-export const Score = (props) => {
-  const {
-    location: {
-      state: { questions },
-    },
-  } = props;
+const data = [
+  {
+    key: '1',
+    firstName: 'John',
+    value: 32,
+  },
+  {
+    key: '2',
+    firstName: 'Jim',
+    value: 42,
+  },
+  {
+    key: '3',
+    firstName: 'Joe',
+    value: 32,
+  },
+];
 
-  const correctAnwsers = 5 - questions.reduce((agg, curr) => (agg += curr.isCorrect ? 1 : 0), 0);
-
-  let history = useHistory();
+export const Score = () => {
   return (
-    <CardContentv2>
+    <Box>
       <CardContent>
-        <Row justify="start">
-          <CustomCol span="10">
-            <CustomTitle>{bravo}</CustomTitle>
-            <DescriptionBox>
-              <CustomDescription>{youAnswearedCorractly + correctAnwsers + '/5' + tasks}</CustomDescription>
-            </DescriptionBox>
-            <CustomButton type="primary" onClick={() => history.push('/result', { questions })}>
-              {seeYourAnswers}
-            </CustomButton>
-            <CustomButton type="primary" onClick={() => history.push('/information')}>
-              {playAgain}
-            </CustomButton>
-            <CustomButton type="primary" onClick={() => history.push('/score')}>
-              {score}
-            </CustomButton>
-          </CustomCol>
-          <Col span="12">
-            {
-              <BoxImage>
-                <Image width={300} src={getEmoticon(correctAnwsers)} />
-              </BoxImage>
-            }
-          </Col>
-        </Row>
+        <Table dataSource={data}>
+          <Column title="First Name" dataIndex="firstName" key="firstName" />
+          <Space size="large" />
+          <Column title="Value" dataIndex="value" key="value" />
+        </Table>
       </CardContent>
-    </CardContentv2>
-  );
-};
+    </Box>
+  )
+}

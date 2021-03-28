@@ -18,6 +18,7 @@ export const AppRoutes = () => {
       <TransitionGroup>
         <CSSTransition classNames="fade" timeout={600}>
           <Switch>
+            <Route path={AppRoute.Score} component={Score} />
             <Route path={AppRoute.Login} component={Login} />
             <Route path={AppRoute.Information} component={InformationPage} />
             <Route path={AppRoute.Game} component={Game} />
@@ -25,7 +26,6 @@ export const AppRoutes = () => {
             <Route path={AppRoute.Answers} component={AnswearsPage} />
             <Route path={AppRoute.Result} component={Result} />
             <Route path={AppRoute.Start} component={StartPage} />
-            <Route path={AppRoute.Score} component={Score} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
