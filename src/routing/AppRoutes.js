@@ -17,13 +17,13 @@ export const AppRoutes = () => {
       <TransitionGroup>
         <CSSTransition classNames="fade" timeout={600}>
           <Switch>
-            <Route path={AppRoute.Start} component={StartPage} />
             <Route path={AppRoute.Login} component={Login} />
             <Route path={AppRoute.Information} component={InformationPage} />
             <Route path={AppRoute.Game} component={Game} />
             <Route path={AppRoute.Summary} component={Summary} />
             <Route path={AppRoute.Answers} component={AnswearsPage} />
-            <Route path={'/result'} component={Result} />
+            <Route path={AppRoute.Result} component={Result} />
+            <Route path={AppRoute.Start} component={StartPage} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
