@@ -4,13 +4,13 @@ body {
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: 10305F;
+  background-color: 10305f;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* .slick-track {
-  width: 100vw !important;
-} */
+.slick-dots li button {
+  pointer-events: none !important;
+}
