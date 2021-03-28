@@ -44,7 +44,7 @@ export const Summary = (props) => {
             <DescriptionBox>
               <CustomDescription>{youAnswearedCorractly + correctAnwsers + tasks}</CustomDescription>
             </DescriptionBox>
-            <CustomButton type="primary" onClick={() => history.push(AppRoute.Answers, { questions })}>
+            <CustomButton type="primary" onClick={() => history.push(AppRoute.Result, { questions })}>
               {seeYourAnswers}
             </CustomButton>
             <CustomButton type="primary" onClick={() => history.push('/information')}>

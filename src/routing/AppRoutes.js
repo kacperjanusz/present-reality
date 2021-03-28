@@ -8,6 +8,7 @@ import { StartPage } from '../Pages/StartPage/StartPage';
 import { Summary } from '../Pages/Summary/Summary';
 import { AnswearsPage } from '../Pages/AnswearsPage/AnswearsPage';
 import { AppRoute } from './AppRoute';
+import { Result } from '../Pages/Result/Result';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 export const AppRoutes = () => {
@@ -22,6 +23,7 @@ export const AppRoutes = () => {
             <Route path={AppRoute.Summary} component={Summary} />
             <Route path={AppRoute.Start} component={StartPage} />
             <Route path={AppRoute.Answears} component={AnswearsPage} />
+            <Route path={AppRoute.Result} component={Result} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
